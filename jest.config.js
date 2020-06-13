@@ -6,7 +6,7 @@ module.exports = {
   // automock: false,
 
   // Stop running tests after `n` failures
-  // bail: 0,
+  bail: 1,
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\marco\\AppData\\Local\\Temp\\jest",
@@ -18,9 +18,7 @@ module.exports = {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: [
-    '<rootDir>/src/modules/**/services/*.ts'
-  ],
+  collectCoverageFrom: [ '<rootDir>/src/app/**/*.ts' ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -32,7 +30,7 @@ module.exports = {
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
-    "text-summary",
+    "text",
     "lcov",
   ],
 
@@ -139,8 +137,8 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '**/*.spec.ts'
-  ]
+    '__tests__/**/*.test.ts',
+  ],
   //  "**/__tests__/**/*.[jt]s?(x)",
   //  "**/?(*.)+(spec|test).[tj]s?(x)"
   // ],
